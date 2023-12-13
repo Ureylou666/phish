@@ -357,7 +357,7 @@ function trigger() {
     headers: {
       'Content-Type': 'application/json'
     },
-    body: JSON.stringify({ username + " 点击了钓鱼邮件，并输入了员工账号" })
+    body: JSON.stringify({ username + ' 点击了钓鱼邮件，并输入了员工账号' })
   })
   .then(response => {
     if (!response.ok) {
